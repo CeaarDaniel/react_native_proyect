@@ -1,7 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput} from 'react-native';
+import React, {useState} from 'react';
 
 export default function App() {
+  const [text, setText] = useState('');
+   
   return (
     <View style={styles.container}>
       <Text>Hello word, this is the firs app usinf vscode spaces</Text>
@@ -11,6 +14,14 @@ export default function App() {
          <Text>
           el comando usa es: expo start --tunnel
       </Text>
+      <TextInput
+        style={{height: 40}}
+        placeholder="Type here to translate!"
+        onChangeText={newText => setText(newText)}
+        defaultValue={text}
+      />
+      
+
       <StatusBar style="auto" />
     </View>
   );
