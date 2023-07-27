@@ -16,7 +16,7 @@ export default function App() {
       </Text>
       <TextInput
         style={{height: 40}}
-        placeholder="Escriba un texto"
+        placeholder="Escrriba un texto"
         onChangeText={newText => setText(newText)}
         defaultValue={text}
       />
